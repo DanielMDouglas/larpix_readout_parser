@@ -31,6 +31,8 @@ def get_run_config(run_config_path, use_builtin = False):
     run_config['ADC_COUNTS'] = run_yaml['ADC_COUNTS']
     run_config['CLOCK_CYCLE'] = run_yaml['CLOCK_CYCLE'] # us
 
+    run_config['time_interval'] = run_yaml['time_interval'] # us
+
     run_config['efield'] = run_yaml['e_field'] / (units.kV / units.cm) # kV/cm # the input from the yaml should be in kV/mm
     run_config['temp'] = run_yaml['temperature'] / (units.K) #K
 
